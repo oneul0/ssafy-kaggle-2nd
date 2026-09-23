@@ -1,0 +1,60 @@
+# ---- Python ----
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# ---- 가상환경 (용량 큼, requirements-baseline*.txt로 각자 재생성) ----
+baseline/
+baseline5/
+
+# ---- 모델 가중치 / 오프라인 wheel (용량 큼, 각자 다운로드) ----
+가이드 및 코드/downloads/
+
+# ---- 원본 데이터셋 이미지 (용량 큼, 대회 페이지에서 개별 다운로드) ----
+data/
+
+# ---- 대회 배포/자료 zip ----
+*.zip
+
+# ---- 학습 산출물 (adapter 가중치, 용량 큼. train_lora.py로 재생성 가능, 필요 시 팀 드라이브로 공유) ----
+outputs/adapters/
+
+# ---- 실행 로그 (용량 크고 인코딩 깨짐 있음, 재실행하면 다시 생김) ----
+outputs/logs/
+outputs/**/*.log
+
+# ---- 제출 파일 (probs/*.npz + make_ensemble_sub.py로 재생성 가능) ----
+outputs/submissions/
+
+# ---- OS ----
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- 아래는 반드시 커밋할 것 (참고용, 삭제하지 말 것) ----
+# outputs/split/*.csv                    <- 전원 동일 홀드아웃 유지에 필수
+# outputs/probs/*.npz, *_detail.csv      <- 앙상블 재료, 팀원 간 교환용
+# outputs/experiments.csv                <- 실험 결과 누적 기록
+# outputs/leaderboard_log.csv            <- 리더보드 제출 기록
+
+# model/checkpoint
+checkpoints/
+checkpoint*/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
+# training outputs
+outputs/
+wandb/
+runs/
+logs/
+
+# cache
+__pycache__/
+*.pyc
+
+# dataset / large artifacts
+data/
